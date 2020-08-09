@@ -1,7 +1,7 @@
 # KeePassMasterSlaveSync
-[![Latest release](https://img.shields.io/github/release/OlI5ER/KeePassMasterSlaveSync2.svg?label=latest%20release)](https://github.com/OlI5ER/KeePassMasterSlaveSync2/releases/latest)
-[![Github All Releases](https://img.shields.io/github/downloads/OlI5ER/KeePassMasterSlaveSync2/total.svg)](https://github.com/OlI5ER/KeePassMasterSlaveSync2/releases)
-[![License](https://img.shields.io/github/license/OlI5ER/KeePassMasterSlaveSync2.svg)](https://github.com/OlI5ER/KeePassMasterSlaveSync2/blob/master/LICENSE)
+[![Latest release](https://img.shields.io/github/release/OIl53R/KeePassMasterSlaveSync2.svg?label=latest%20release)](https://github.com/OIl53R/KeePassMasterSlaveSync2/releases/latest)
+[![Github All Releases](https://img.shields.io/github/downloads/OIl53R/KeePassMasterSlaveSync2/total.svg)](https://github.com/OIl53R/KeePassMasterSlaveSync2/releases)
+[![License](https://img.shields.io/github/license/OIl53R/KeePassMasterSlaveSync2.svg)](https://github.com/OIl53R/KeePassMasterSlaveSync2/blob/master/LICENSE)
 
 KeePassMasterSlaveSync is a KeePass 2 plugin that Allows synchronization of specific Groups or Tags between local databases.
 This plugin is heavily based on [KeePassSubsetExport.](https://github.com/lukeIam/KeePassSubsetExport)
