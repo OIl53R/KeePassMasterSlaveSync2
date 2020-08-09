@@ -429,12 +429,14 @@ namespace KeePassMasterSlaveSync
             List<PwGroup> groupToExport = new List<PwGroup>();
             if (group.Contains('/'))
             {
-                PwGroup currGroup = null;
+                PwObjectList<PwGroup> groups;
+                PwGroup currGroup = sourceDb.RootGroup;
                 string path = "";
-                PwObjectList<PwGroup> groups = sourceDb.RootGroup.GetGroups(false);
-                foreach (string subgroup in group.Split('/'))
+                List<string> groupNames = new List<string>(group.Split('/'));
+                foreach (string subgroup in groupNames)
                 {
                     path += "/" + subgroup;
+                    groups = currGroup.GetGroups(false);
                     foreach (var g in groups)
                     {
                         if (g.Name == subgroup)
@@ -445,10 +447,13 @@ namespace KeePassMasterSlaveSync
                     if (currGroup == null)
                     {
                         MessageService.ShowWarning("Path " + path + " to group not found");
+                        break;
                     }
-                    else
+                    else if((groupNames.IndexOf(subgroup)+1) == groupNames.Count()
+                        && currGroup.GetHashCode() != sourceDb.RootGroup.GetHashCode())
                     {
                         groupToExport.Add(currGroup);
+                        break;
                     }
                 }
             }
