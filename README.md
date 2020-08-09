@@ -48,12 +48,13 @@ If you have more experience with KeePass plugins, I would be very grateful if yo
 - To prevent duplicated Uuids, the plugin will delete any entry from the slave DB that has been moved out of the synced group or tag.
 
 ## Changes OlI53R to [Angelelz Project](https://github.com/Angelelz/KeePassMasterSlaveSync/)
-- Linebreaks are now allowed inside Settings
-- Additional Delimiter (`/`) for full paths to groups
-- Added immediate delete on slave side. So if delete something on the master (put to `Recycle Bin`), the entry will be deleted on the slave database
-- Fixed issue with moving Folders
-- Fixed Group not found when pushed `Save All` in KeyPass.
-- Changed error Message for Group-Setting so you can see which group wasn't found on an error.
+- Linebreaks are now allowed inside settings fields.
+- Additional Delimiter (`/`) for full paths to groups. (In case a group exists multiple times but not all these groups should be shared)
+- Added immediate delete on slave side. So if you delete something on the Master (put to `Recycle Bin`), the entry will be deleted on the Slave without the `Recycle Bin`
+- Fixed issue with moving groups
+- Fixed random "group not found"-Error when pressed `Save All` in KeyPass.
+- Changed error message for Group-Setting so you can see which group wasn't found.
+- Added clean up functions to delete empty groups.
 
 ![create](https://raw.githubusercontent.com/OIl53R/KeePassMasterSlaveSync2/master/KeePassMasterSlaveSync/Capture/CaptureMSS.png)
 
