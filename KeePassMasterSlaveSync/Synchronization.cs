@@ -38,6 +38,10 @@ namespace KeePassMasterSlaveSync
                 KeyFilePath = keyFilePath;
                 Disabled = disabled;
             }
+            public override int GetHashCode()
+            {
+                return this.TargetFilePath.GetHashCode();
+            }
             public override bool Equals(object obj)
             {
                 return obj != null
@@ -425,12 +429,12 @@ namespace KeePassMasterSlaveSync
             List<PwGroup> groupToExport = new List<PwGroup>();
             if (group.Contains('/'))
             {
-                var currGroup = sourceDb.RootGroup;
+                PwGroup currGroup = null;
                 string path = "";
+                PwObjectList<PwGroup> groups = sourceDb.RootGroup.GetGroups(false);
                 foreach (string subgroup in group.Split('/'))
                 {
                     path += "/" + subgroup;
-                    var groups = currGroup.GetGroups(false);
                     foreach (var g in groups)
                     {
                         if (g.Name == subgroup)
@@ -440,10 +444,13 @@ namespace KeePassMasterSlaveSync
                     }
                     if (currGroup == null)
                     {
-                        throw new ArgumentException("Path " + path + " not found");
+                        MessageService.ShowWarning("Path " + path + " to group not found");
+                    }
+                    else
+                    {
+                        groupToExport.Add(currGroup);
                     }
                 }
-                groupToExport.Add(currGroup);
             }
             else
             {
@@ -451,7 +458,7 @@ namespace KeePassMasterSlaveSync
             }
             if (groupToExport.Count == 0)
             {
-                throw new ArgumentException("No group with the name " + group + " found.");
+                MessageService.ShowWarning("No group with the name " + group + " found.");
             }
             return groupToExport;
         }
