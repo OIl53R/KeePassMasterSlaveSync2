@@ -5,6 +5,7 @@
 
 KeePassMasterSlaveSync is a KeePass 2 plugin that Allows synchronization of specific Groups or Tags between local databases.
 This plugin is heavily based on [KeePassSubsetExport.](https://github.com/lukeIam/KeePassSubsetExport)
+THIS IS JUST A FURTHER DEVELOPMENT, SO THE MAIN CREDIT GOES TO [ANGELELZ KEEPASSMASTERSLAVESYNC PROJECT!](https://github.com/Angelelz/KeePassMasterSlaveSync)
 
 ## Why?
 Automatically and securely share entries and groups with other databases. I have my personal database from which I share a group containing bank and family entries with my wife's database.
@@ -17,7 +18,7 @@ I'm not an expert programmer and I tried not to compromise security - but I can'
 If you have more experience with KeePass plugins, I would be very grateful if you have a look on the code.
 
 ## How to install?
-- Download the latest release from [here](https://github.com/OlI5ER/KeePassMasterSlaveSync2/releases)
+- Download the latest release from [here](https://github.com/OIl53R/KeePassMasterSlaveSync2/releases)
 - Place KeePassMasterSlaveSync.plgx in the KeePass program directory
 - Start KeePass and the plugin is automatically loaded (check the Plugin menu)
 
@@ -46,8 +47,6 @@ If you have more experience with KeePass plugins, I would be very grateful if yo
 - The plugin will automatically update the UI of any opened database.
 - To prevent duplicated Uuids, the plugin will delete any entry from the slave DB that has been moved out of the synced group or tag.
 
-![create](https://raw.githubusercontent.com/OlI5ER/KeePassMasterSlaveSync2/master/KeePassMasterSlaveSync/Capture/CaptureMSS.png)
-
 ## Changes OlI53R to [Angelelz Project](https://github.com/Angelelz/KeePassMasterSlaveSync/)
 - Linebreaks are now allowed inside Settings
 - Additional Delimiter (`/`) for full paths to groups
@@ -55,6 +54,8 @@ If you have more experience with KeePass plugins, I would be very grateful if yo
 - Fixed issue with moving Folders
 - Fixed Group not found when pushed `Save All` in KeyPass.
 - Changed error Message for Group-Setting so you can see which group wasn't found on an error.
+
+![create](https://raw.githubusercontent.com/OIl53R/KeePassMasterSlaveSync2/master/KeePassMasterSlaveSync/Capture/CaptureMSS.png)
 
 ## Next up!
 - You tell me...
