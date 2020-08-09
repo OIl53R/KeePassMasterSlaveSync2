@@ -431,22 +431,22 @@ namespace KeePassMasterSlaveSync
             {
                 PwObjectList<PwGroup> groups;
                 PwGroup currGroup = sourceDb.RootGroup;
-                string path = "";
                 List<string> groupNames = new List<string>(group.Split('/'));
                 foreach (string subgroup in groupNames)
                 {
-                    path += "/" + subgroup;
                     groups = currGroup.GetGroups(false);
+                    bool isSet = false;
                     foreach (var g in groups)
                     {
                         if (g.Name == subgroup)
                         {
+                            isSet = true;
                             currGroup = g;
                         }
                     }
-                    if (currGroup == null)
+                    if (currGroup == null || !isSet)
                     {
-                        MessageService.ShowWarning("Path " + path + " to group not found");
+                        MessageService.ShowWarning("Path " + group + " to group not found");
                         break;
                     }
                     else if((groupNames.IndexOf(subgroup)+1) == groupNames.Count()
