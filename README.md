@@ -3,9 +3,9 @@
 [![Github All Releases](https://img.shields.io/github/downloads/OIl53R/KeePassMasterSlaveSync2/total.svg)](https://github.com/OIl53R/KeePassMasterSlaveSync2/releases)
 [![License](https://img.shields.io/github/license/OIl53R/KeePassMasterSlaveSync2.svg)](https://github.com/OIl53R/KeePassMasterSlaveSync2/blob/master/LICENSE)
 
-KeePassMasterSlaveSync is a KeePass 2 plugin that Allows synchronization of specific Groups or Tags between local databases.
-\This plugin is heavily based on [KeePassSubsetExport.](https://github.com/lukeIam/KeePassSubsetExport)
-\THIS IS JUST A FURTHER DEVELOPMENT, SO THE MAIN CREDIT GOES TO [ANGELELZ KEEPASSMASTERSLAVESYNC PROJECT!](https://github.com/Angelelz/KeePassMasterSlaveSync)
+KeePassMasterSlaveSync is a KeePass 2 plugin that Allows synchronization of specific Groups or Tags between local databases.\
+This plugin is heavily based on [KeePassSubsetExport.](https://github.com/lukeIam/KeePassSubsetExport)\
+THIS IS JUST A FURTHER DEVELOPMENT, SO THE MAIN CREDIT GOES TO [ANGELELZ KEEPASSMASTERSLAVESYNC PROJECT!](https://github.com/Angelelz/KeePassMasterSlaveSync)
 
 ## Why?
 Automatically and securely share entries and groups with other databases. I have my personal database from which I share a group containing bank and family entries with my wife's database.
